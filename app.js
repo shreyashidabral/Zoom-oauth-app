@@ -18,6 +18,7 @@ app.get("/", (req, res) => {
 
     request.post(authurl, (error, response, body) => {
         body = JSON.parse(body);
+        console.log("Sign-in successful");
 
         if (body.access_token) {           //if access token is successfully received after authentication, create a meeting for user
             let meetingdetails = {
@@ -25,7 +26,7 @@ app.get("/", (req, res) => {
                 type: 2,
                 start_time: "23-01-14T10: 21: 57",
                 duration: "60",
-                timezone: "Europe/Madrid",
+                timezone: "Asia/Calcutta",
                 agenda: "test",
 
                 recurrence: { type: 1, repeat_interval: 1 },
