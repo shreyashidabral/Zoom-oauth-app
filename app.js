@@ -103,5 +103,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(4000, () =>
-  console.log(`Zoom Hello World app listening at PORT: 4000`)
+  console.log(`Server started at PORT: 4000`)
 );
